@@ -3,10 +3,8 @@
 
 <?php
                 $id = $_POST['id'];
-                $sql = "UPDATE images
-                        SET likes = likes + 1
-                        WHERE id = $id
-                        ";
+                $sql = "DELETE FROM images
+                WHERE id = $id";
 
                 mysqli_query($conn, $sql);
                 

@@ -29,6 +29,17 @@
             text-decoration: none;
             color: black;
         }
+
+        input[type=image] {
+            color: black;
+            fill: orange;
+            
+        }
+        
+        path {
+            background-color: red;
+            fill: purple;
+        }
     </style>
     <body>
         
@@ -51,8 +62,8 @@
                     echo '<div class= alb>';
                     echo '<img src="uploads/' . $image_url . '" alt="Image ' . $id . '">';
                     echo '<p>' . $descriptions . '</p>';
-                    echo '<a href="like.php" class="button"><img src="like.png" style="width:20px;height:20px;"> #'.$id.' Like</a>';
-                    echo '<form method="post"><input type="button" name="btn" value="" /></form>';
+                    echo '<form action="like.php" method="post"><input type="hidden" name="id" value="'.$id.'"/><input type="image" src="thumb.svg" name="btn" value="Like" style="width: 20px;"/></form>';
+                    echo '<form action="delete.php" method="post"><input type="hidden" name="id" value="'.$id.'"/><input type="image" src="trashban.png" name="btn" value="Like" style="width: 20px;"/></form>';
                     echo '</div>';
                     
                 }
