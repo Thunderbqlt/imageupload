@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Upload-image</title>
+        <title>Memories</title>
         <link rel="stylesheet" href="style.css">
         <style>
             body {
@@ -17,8 +17,22 @@
             }
 
             .title {
-                padding-bottom: 100px;
+                
+            
+              
             }
+            .info {
+                
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding-left: 300px;
+                padding-right: 300px;
+            }
+
+            
             input[type=text] {
             background-color: white;
             border-color: black;
@@ -54,6 +68,36 @@
                 height: 20px;
                 width: 20px;
             }
+            input[type=button]:hover {
+    background-color: #d80032;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 900; 
+    
+    
+  }
+  input[type=button] {
+    background-color: #ef233c;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 900; 
+    
+    
+  }
 
             
 
@@ -65,28 +109,13 @@
 
 
         <div class="title">
-        <p>UPLOAD YOUR PIC HERE</p>
+        <p>Memories Project</p>
         </diV>
-        <?php if (isset($_GET['error'])): ?>
-            <p><?php echo $_GET['error']; ?></p>
-        <?php endif ?>
-            <form action="upload.php"
-                method="post"
-                enctype="multipart/form-data">
-                
-                <input type="file"
-                    name="my_image">
-                <input type="submit"
-                id="submitButton"
-                name="submit"
-                value="Upload">
-             <label for="descriptions">Description:</label><input type="text" name="descriptions" id="descriptions"><br>
-             <label for="copyright">Is this your image?</label>
-             <input type="checkbox" value="copyright" name="message">
-             
-            <form action="view.php" method="post">
-                
-            
-            </form>
+        <div class="info">
+            <p>This web-app allows you to upload images of your choice to be held on a server. To do this click choose file, check the copyright box and click upload.</p>
+        </div>
+            <form action="index.php">
+    <input type="submit" value="Proceed" />
+</form>
     </body>
 </html>

@@ -40,6 +40,15 @@
             background-color: red;
             fill: purple;
         }
+
+        input[type=image]:hover {
+            background-image: url("gallery.png");
+    
+        }
+
+        .alb:hover {
+                background-color: red;
+        }
     </style>
     <body>
         
