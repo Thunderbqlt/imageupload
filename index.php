@@ -2,9 +2,14 @@
 
 <html>
     <head>
+        <link rel="icon" href="icons/gallery.png">
         <title>Upload-image</title>
         <link rel="stylesheet" href="style.css">
         <style>
+            img {
+                display: flex;
+
+            }
             body {
                 display: flex;
                 justify-content: center;
@@ -17,7 +22,8 @@
             }
 
             .title {
-                padding-bottom: 100px;
+                text-align: center;
+                padding-bottom: 50px;
             }
             input[type=text] {
             background-color: white;
@@ -45,6 +51,7 @@
                 
                 padding-left: 350px;
                 font-size: 20px;
+                text-align: center;
                
                 
             }
@@ -63,9 +70,12 @@
     
     </form>
 
-
+        <a href="view.php">
+        <img src="icons/gallery.png" style="width:100px;height:100px;">
+        </a>
         <div class="title">
         <p>UPLOAD YOUR PIC HERE</p>
+        
         </diV>
         <?php if (isset($_GET['error'])): ?>
             <p><?php echo $_GET['error']; ?></p>

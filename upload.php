@@ -2,7 +2,7 @@
 
 <?php
 
-
+//This code performs the checks to make sure the image uploaded does not cause any errors
 
 if (!isset($_POST['message'])) {
     $em = "This is not yours!";
